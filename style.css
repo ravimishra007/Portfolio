@@ -444,6 +444,7 @@ color: orangered;
     padding: 0 1rem 0;
     margin: auto;
     margin-top: var(--mb-0-125);
+    margin-bottom: -75px;
   }
   
   .home_scroll-button {
@@ -470,25 +471,64 @@ color: orangered;
   .home_scroll-arrow {
     font-size: 1.25rem;
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   /* ====== ABOUT ====== */
+  .about_img {
+    width: 300px;
+    border-radius: 1rem;
+    justify-content: center;
+    margin: auto;
+    align-self: center;
+  }
   
+  .about_description {
+    text-align: justify;
+    margin-bottom: var(--mb-2-5);
+  }
+  
+  .about_info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+  }
+  
+  .about_info>div {
+    padding: var(--mb-0-5) var(--mb-1-5) var(--mb-0-5);
+    border: 1px solid transparent;
+    border-radius: 0.75rem;
+    transition: 0.5s;
+  }
+  
+  .about_info>div:hover {
+    border: 1px solid var(--first-color);
+    cursor: pointer;
+  }
+  
+  .about_info-title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+  }
+  
+  .about_info-name {
+    font-size: var(--smaller-font-size);
+  }
+  
+  .about_info-title,
+  
+  .about_info-name {
+    display: block;
+    text-align: center;
+  }
+  
+  .about_buttons {
+    display: flex;
+    justify-content: center;
+  }
+  
+
+
   /* ====== QUALIFICATION ====== */
   
   /* ====== SKILLS ====== */

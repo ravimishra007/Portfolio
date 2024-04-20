@@ -130,6 +130,21 @@ if (selectedTheme) {
 themeButton.addEventListener('click', () => {
     
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
 
