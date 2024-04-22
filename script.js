@@ -146,3 +146,67 @@ themeButton.addEventListener('click', () => {
 
 
 })
+
+
+
+let container1 = document.getElementById("portfolio_img001");
+// container2.style.marginLeft = "80px";
+
+let img1 = document.createElement("img");
+img1.style.width = "600px";
+img1.style.height = "320px";
+img1.style.borderRadius = "0.5rem";
+
+container1.appendChild(img1);
+
+
+let imageArr = [
+  "./images/stayBNB.png",
+  "./images/STAYBNimage-1.png",
+  "./images/STAYBNBimage-2.png",
+  "./images/STAYBNBimage-3.png",
+  "./images/STAYBNBimage-10.png",
+];
+
+let index = 0;
+
+setInterval(() => {
+  if (index >= imageArr.length) {
+    index = 0;
+  }
+img1.src = imageArr[index++];
+}, 1500);
+
+
+// 3nd project
+
+let container3 = document.getElementById("portfolio_img003");
+// container2.style.marginLeft = "80px";
+
+let img3 = document.createElement("img");
+img3.style.width = "600px";
+img3.style.height = "320px";
+img3.style.borderRadius = "0.5rem";
+
+container3.appendChild(img3);
+
+
+let imageArr3 = [
+  "./images/clone1.png",
+  "./images/clone2.png",
+  "./images/clone3.png",
+  "./images/clone4.png",
+  "./images/clone 5.png",
+];
+
+let index3 = 0;
+
+setInterval(() => {
+  if (index3 >= imageArr3.length) {
+    index3 = 0;
+  }
+img3.src = imageArr3[index3++];
+}, 1500);
+
+
+

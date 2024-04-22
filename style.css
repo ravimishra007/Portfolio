@@ -708,8 +708,8 @@ color: orangered;
 }
 
 .portfolio_img {
-  height: auto;
-  border-radius: 0.5rem;
+  /* height: auto; */
+  /* border-radius: 1rem; */
   justify-self: center;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transition: 0.5s;
