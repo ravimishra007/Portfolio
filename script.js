@@ -147,7 +147,7 @@ themeButton.addEventListener('click', () => {
 
 })
 
-
+// slider
 
 let container1 = document.getElementById("portfolio_img001");
 // container2.style.marginLeft = "80px";
