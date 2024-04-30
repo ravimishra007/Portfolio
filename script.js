@@ -256,11 +256,11 @@ container4.appendChild(img4);
 
 
 let imageArr4 = [
-//   "./images/Navbar-Figma.png",
+    "./images/navbar.png",
   "./images/Hemburger.png",
   "./images/Body-Figma1.png",
   "./images/Body-Figma2.png",
-//   "./images/Footer-Figma.png",
+  "./images/footer.png",
 ];
 
 let index4 = 0;
