@@ -155,7 +155,7 @@ let container1 = document.getElementById("portfolio_img001");
 let img1 = document.createElement("img");
 img1.style.width = "600px";
 img1.style.height = "320px";
-img1.style.borderRadius = "0.5rem";
+img1.style.borderRadius = "0.8rem";
 
 container1.appendChild(img1);
 
@@ -178,7 +178,39 @@ img1.src = imageArr[index++];
 }, 1500);
 
 
-// 3nd project
+// 2nd project
+
+let container2 = document.getElementById("portfolio_img002");
+// container2.style.marginLeft = "80px";
+
+let img2 = document.createElement("img");
+img2.style.width = "600px";
+img2.style.height = "320px";
+img2.style.borderRadius = "0.8rem";
+
+container2.appendChild(img2);
+
+
+let imageArr2 = [
+    "./images/project logo.png",
+    "./images/sun003.png",
+  "./images/sunshine.png",
+  "./images/sun004.png",
+  "./images/sun001.png",
+
+];
+
+let index2 = 0;
+
+setInterval(() => {
+  if (index2 >= imageArr2.length) {
+    index2 = 0;
+  }
+img2.src = imageArr2[index2++];
+}, 1500);
+
+
+// 3rd project
 
 let container3 = document.getElementById("portfolio_img003");
 // container2.style.marginLeft = "80px";
@@ -186,7 +218,7 @@ let container3 = document.getElementById("portfolio_img003");
 let img3 = document.createElement("img");
 img3.style.width = "600px";
 img3.style.height = "320px";
-img3.style.borderRadius = "0.5rem";
+img3.style.borderRadius = "0.8rem";
 
 container3.appendChild(img3);
 
@@ -206,6 +238,38 @@ setInterval(() => {
     index3 = 0;
   }
 img3.src = imageArr3[index3++];
+}, 1500);
+
+
+
+// 3nd project
+
+let container4 = document.getElementById("portfolio_img004");
+// container2.style.marginLeft = "80px";
+
+let img4 = document.createElement("img");
+img4.style.width = "600px";
+img4.style.height = "320px";
+img4.style.borderRadius = "0.8rem";
+
+container4.appendChild(img4);
+
+
+let imageArr4 = [
+  "./images/Navbar-Figma.png",
+  "./images/Hemburger.png",
+  "./images/Body-Figma1.png",
+  "./images/Body-Figma2.png",
+  "./images/Footer-Figma.png",
+];
+
+let index4 = 0;
+
+setInterval(() => {
+  if (index4 >= imageArr4.length) {
+    index4 = 0;
+  }
+img4.src = imageArr4[index4++];
 }, 1500);
 
 
