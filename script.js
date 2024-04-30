@@ -155,7 +155,7 @@ let container1 = document.getElementById("portfolio_img001");
 let img1 = document.createElement("img");
 img1.style.width = "600px";
 img1.style.height = "320px";
-img1.style.borderRadius = "0.8rem";
+img1.style.borderRadius = "0.5rem";
 
 container1.appendChild(img1);
 
@@ -186,7 +186,7 @@ let container2 = document.getElementById("portfolio_img002");
 let img2 = document.createElement("img");
 img2.style.width = "600px";
 img2.style.height = "320px";
-img2.style.borderRadius = "0.8rem";
+img2.style.borderRadius = "0.5rem";
 
 container2.appendChild(img2);
 
@@ -218,7 +218,7 @@ let container3 = document.getElementById("portfolio_img003");
 let img3 = document.createElement("img");
 img3.style.width = "600px";
 img3.style.height = "320px";
-img3.style.borderRadius = "0.8rem";
+img3.style.borderRadius = "0.5rem";
 
 container3.appendChild(img3);
 
@@ -250,7 +250,7 @@ let container4 = document.getElementById("portfolio_img004");
 let img4 = document.createElement("img");
 img4.style.width = "600px";
 img4.style.height = "320px";
-img4.style.borderRadius = "0.8rem";
+img4.style.borderRadius = "0.5rem";
 
 container4.appendChild(img4);
 
