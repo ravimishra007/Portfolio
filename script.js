@@ -273,4 +273,19 @@ img4.src = imageArr4[index4++];
 }, 1500);
 
 
+// resume
+
+document.getElementById('resume-button-1').addEventListener('click', function() {
+  window.open(
+    "https://drive.google.com/file/d/1vzF437ugdFVGXw8t6jsJ9ebQr1l_VSIY/view?usp=sharing"
+  );
+});
+
+document.getElementById('resume-button-2').addEventListener('click', function() {
+  window.open(
+    "https://drive.google.com/file/d/1vzF437ugdFVGXw8t6jsJ9ebQr1l_VSIY/view?usp=sharing"
+);
+});
+
+
 
