@@ -277,13 +277,13 @@ img4.src = imageArr4[index4++];
 
 document.getElementById('resume-button-1').addEventListener('click', function() {
   window.open(
-    "https://drive.google.com/file/d/1vzF437ugdFVGXw8t6jsJ9ebQr1l_VSIY/view?usp=sharing"
+    "https://drive.google.com/file/d/1H8YSrCP0h9QYALPROIP6dgAaPxa3YQU8/view"
   );
 });
 
 document.getElementById('resume-button-2').addEventListener('click', function() {
   window.open(
-    "https://drive.google.com/file/d/1vzF437ugdFVGXw8t6jsJ9ebQr1l_VSIY/view?usp=sharing"
+    "https://drive.google.com/file/d/1H8YSrCP0h9QYALPROIP6dgAaPxa3YQU8/view"
 );
 });
 
