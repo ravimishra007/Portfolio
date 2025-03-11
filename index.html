@@ -1011,7 +1011,7 @@
     <script>
       // Initialize EmailJS with your public key
       (function() {
-        emailjs.init("npul1Yqvw7BKwtXCT"); // Replace with your actual public key from EmailJS
+        emailjs.init("npul1Yqvw7BKwtXCT");
       })();
 
       // Function to get visitor's IP address and location
@@ -1021,7 +1021,6 @@
           const ipData = await response.json();
           const ip = ipData.ip;
           
-          // Get location data
           const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`);
           const geoData = await geoResponse.json();
           
@@ -1040,18 +1039,48 @@
         }
       }
 
+      // Function to show visitor form
+      function showVisitorForm() {
+        return new Promise((resolve) => {
+          const formHTML = `
+            <div id="visitor-form" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+                background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); z-index: 1000;">
+              <h3 style="margin-bottom: 15px;">Welcome to my Portfolio!</h3>
+              <p style="margin-bottom: 15px;">Please introduce yourself:</p>
+              <input type="text" id="visitor-name" placeholder="Your Name" style="display: block; width: 100%; margin-bottom: 10px; padding: 8px;">
+              <input type="email" id="visitor-email" placeholder="Your Email" style="display: block; width: 100%; margin-bottom: 10px; padding: 8px;">
+              <button onclick="submitVisitorInfo()" style="background: #0A66C2; color: white; border: none; padding: 8px 15px; border-radius: 4px; cursor: pointer;">
+                Submit
+              </button>
+            </div>
+          `;
+          
+          document.body.insertAdjacentHTML('beforeend', formHTML);
+          
+          window.submitVisitorInfo = function() {
+            const name = document.getElementById('visitor-name').value;
+            const email = document.getElementById('visitor-email').value;
+            document.getElementById('visitor-form').remove();
+            resolve({ name, email });
+          };
+        });
+      }
+
       // Send notification when page loads
       window.addEventListener('load', async () => {
         const visitorInfo = await getVisitorInfo();
+        const visitorDetails = await showVisitorForm();
         
         // Send email using EmailJS
         emailjs.send(
-          "service_e6jsl6r", // Replace with your EmailJS service ID
-          "template_bgrpzaf", // Replace with your EmailJS template ID
+          "service_e6jsl6r",
+          "template_bgrpzaf",
           {
             visitor_ip: visitorInfo.ip,
             visitor_location: visitorInfo.location,
-            visit_time: visitorInfo.timestamp
+            visit_time: visitorInfo.timestamp,
+            visitor_name: visitorDetails.name || 'Not provided',
+            visitor_email: visitorDetails.email || 'Not provided'
           }
         ).then(
           function(response) {
