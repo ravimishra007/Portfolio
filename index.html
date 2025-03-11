@@ -891,7 +891,7 @@
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/github-calendar@2.0.0/dist/github-calendar.min.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <!--  -->
 
     <script>
@@ -1008,5 +1008,60 @@
       sr.reveal(".experience_content", { interval: 200 });
     </script>
     <!--=-=-=-=-=-=-=-=-=-=-=-=-= /JAVASCRIPT LINKED FILES =-=-=-=-=-=-=-=-=-=-=-=-=-->
+    <script>
+      // Initialize EmailJS with your public key
+      (function() {
+        emailjs.init("npul1Yqvw7BKwtXCT"); // Replace with your actual public key from EmailJS
+      })();
+
+      // Function to get visitor's IP address and location
+      async function getVisitorInfo() {
+        try {
+          const response = await fetch('https://api.ipify.org?format=json');
+          const ipData = await response.json();
+          const ip = ipData.ip;
+          
+          // Get location data
+          const geoResponse = await fetch(`https://ipapi.co/${ip}/json/`);
+          const geoData = await geoResponse.json();
+          
+          return {
+            ip: ip,
+            location: `${geoData.city}, ${geoData.country_name}`,
+            timestamp: new Date().toLocaleString()
+          };
+        } catch (error) {
+          console.error('Error getting visitor info:', error);
+          return {
+            ip: 'Unknown',
+            location: 'Unknown',
+            timestamp: new Date().toLocaleString()
+          };
+        }
+      }
+
+      // Send notification when page loads
+      window.addEventListener('load', async () => {
+        const visitorInfo = await getVisitorInfo();
+        
+        // Send email using EmailJS
+        emailjs.send(
+          "service_e6jsl6r", // Replace with your EmailJS service ID
+          "template_bgrpzaf", // Replace with your EmailJS template ID
+          {
+            visitor_ip: visitorInfo.ip,
+            visitor_location: visitorInfo.location,
+            visit_time: visitorInfo.timestamp
+          }
+        ).then(
+          function(response) {
+            console.log("Notification sent successfully");
+          },
+          function(error) {
+            console.error("Failed to send notification:", error);
+          }
+        );
+      });
+    </script>
   </body>
 </html>
