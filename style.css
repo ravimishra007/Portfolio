@@ -1356,7 +1356,7 @@ color: orangered;
 
 .experience_duration {
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color:hsl(0.00,0.00%,25.88%);
 }
 
 .experience_list {
@@ -1378,6 +1378,8 @@ color: orangered;
   left: 0;
   color: hsl(0.00,0.00%,12.94%);
 }
+
+
 
 .experience_company-info {
   display: flex;
