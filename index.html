@@ -45,6 +45,11 @@
               </a>
             </li>
             <li class="nav_item">
+              <a href="#experience" class="nav_link nav-link experience">
+                <i class="uil uil-file-alt nav_icon"></i> Experience
+              </a>
+            </li>
+            <li class="nav_item">
               <a href="#skills" class="nav_link nav-link skills">
                 <i class="uil uil-file-alt nav_icon"></i> Skills
               </a>
@@ -250,6 +255,62 @@
         </div>
       </section>
       <!---------------- /About ---------------->
+      <hr class="hr_break_line" />
+
+<!---------------- Work Experience ---------------->
+<section class="experience section" id="experience">
+  <h2 class="section_title">Work Experience</h2>
+  <div class="experience_container container">
+      <!-- Pathnovo Solutions -->
+      <div class="experience_content">
+          <div class="experience_header">
+            <div class="experience_company-info">
+              <a href="https://www.pathnovo.com/" target="_blank" class="experience_company-link">
+              <img src="./images/pathnovologo.png" alt="Pathnovo Solutions Logo" class="experience_company-logo">
+              </a>
+              <div class="experience_title-group">
+                  <h3 class="experience_title">Pathnovo Solutions PVT. LTD.</h3>
+                  <span class="experience_subtitle">Full Stack Developer</span>
+                  <span class="experience_duration">October 2024 - Present</span>
+              </div>
+          </div>
+          </div>
+          <div class="experience_description">
+              <ul class="experience_list">
+                  <li>Designed and built web applications using the MERN stack, aligning with project requirements for seamless frontend and backend integration.</li>
+                  <li>Developed responsive user interfaces with Next.js and TailwindCSS, enhancing the user experience across devices.</li>
+                  <li>Optimized and secured RESTful APIs and managed MongoDB databases for efficient data handling.</li>
+                  <li>Collaborated with cross-functional teams to ensure scalable, maintainable, and high-performance application deployments.</li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- The Matrix Labs -->
+      <div class="experience_content">
+          <div class="experience_header">
+            <div class="experience_company-info">
+              <a href="https://www.thematrixlabs.com/" target="_blank" class="experience_company-link">
+              <img src="./images/matrix labs.svg" alt="Matrix Labs Logo" class="experience_company-logo">
+              </a>
+              <div class="experience_title-group">
+                  <h3 class="experience_title">The Matrix Labs</h3>
+                  <span class="experience_subtitle">Software Developer</span>
+                  <span class="experience_duration">June 2024 - September 2024</span>
+              </div>
+          </div>
+          </div>
+          <div class="experience_description">
+              <ul class="experience_list">
+                  <li>Designed and implemented user interfaces for DeepFake AI applications using React, focusing on creating engaging and dynamic animations.</li>
+                  <li>Developed frontend components for Zeno AI, leveraging technologies like Redux Toolkit, socket.io, and TypeScript for robust and interactive applications.</li>
+                  <li>Gained experience in blockchain technology by integrating smart contracts and decentralized application functionalities with tools like Ether.js and Solidity.</li>
+                  <li>Enhanced user experiences by optimizing UI/UX using TailwindCSS, DaisyUI, and other styling frameworks.</li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</section>
+<!---------------- /Work Experience ---------------->
       <hr class="hr_break_line" />
 
       <!---------------- Skills ---------------->
@@ -943,6 +1004,8 @@
 
       sr.reveal(".footer", {});
       sr.reveal(".footer_container>div", { interval: 100 });
+
+      sr.reveal(".experience_content", { interval: 200 });
     </script>
     <!--=-=-=-=-=-=-=-=-=-=-=-=-= /JAVASCRIPT LINKED FILES =-=-=-=-=-=-=-=-=-=-=-=-=-->
   </body>

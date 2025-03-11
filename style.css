@@ -1310,3 +1310,123 @@ color: orangered;
         grid-template-columns: repeat(2, 1fr);
     }
   }
+
+
+
+  /* Add these styles to your CSS file */
+.experience_container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.experience_content {
+  background: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  border-left: 8px solid var(--first-color);
+  border-bottom: 2px solid var(--first-color);
+}
+
+.experience_content:hover {
+  transform: translateY(-5px);
+}
+
+.experience_header {
+  margin-bottom: 1.5rem;
+}
+
+.experience_title {
+  font-size: 1.125rem !important;
+  font-weight: 600;
+  line-height: 1.5;
+  color:hsl(0, 8%, 15%);
+  margin-bottom: 0.5rem;
+}
+
+.experience_subtitle {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: var(--first-color);
+  margin-bottom: 0.25rem;
+}
+
+.experience_duration {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.experience_list {
+  list-style: none;
+  padding: 0;
+}
+
+.experience_list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: hsl(0.00,0.00%,12.94%);
+}
+
+.experience_list li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  color: hsl(0.00,0.00%,12.94%);
+}
+
+.experience_company-info {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.experience_company-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 8px;
+  background-color: var(--container-color);
+  padding: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.experience_title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.experience_company-link{
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .experience_company-info {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+  }
+
+  .experience_company-logo {
+      width: 50px;
+      height: 50px;
+  }
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .experience_container {
+      padding: 1rem;
+  }
+  
+  .experience_content {
+      padding: 1.5rem;
+  }
+}
