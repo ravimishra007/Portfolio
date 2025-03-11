@@ -1336,19 +1336,19 @@ color: orangered;
 }
 
 .experience_header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem !important; 
 }
 
 .experience_title {
   font-size: 1.125rem !important;
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.5;   
   color:hsl(0, 8%, 15%);
   margin-bottom: 0.5rem;
 }
 
 .experience_subtitle {
-  display: block;
+  display: block; 
   font-size: var(--normal-font-size);
   color: var(--first-color);
   margin-bottom: 0.25rem;
@@ -1360,16 +1360,16 @@ color: orangered;
 }
 
 .experience_list {
-  list-style: none;
-  padding: 0;
+  list-style: none !important;
+  padding: 0 !important;
 }
 
 .experience_list li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
-  color: hsl(0.00,0.00%,12.94%);
+  position: relative !important;
+  padding-left: 1.5rem !important;
+  margin-bottom: 1rem !important;
+  line-height: 1.6 !important;
+  color: hsl(0.00,0.00%,12.94%) !important;
 }
 
 .experience_list li::before {
