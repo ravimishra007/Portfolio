@@ -1425,10 +1425,23 @@ color: orangered;
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .experience_container {
-      padding: 1rem;
+      padding: 10px !important;
   }
   
   .experience_content {
-      padding: 1.5rem;
+      padding: 1rem !important;
+      border-radius: 1rem !important;
+      border-left: 4px solid var(--first-color) !important;
+      border-bottom: 0px solid var(--first-color) !important;
   }
+}
+
+
+@media screen and (max-width: 500px) {
+ 
+  .btn_container {
+    display: flex;
+    justify-content: center !important;
+  }
+
 }
