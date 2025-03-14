@@ -74,7 +74,7 @@
 
               <button id="resume-button-1" class="nav-link resume">
                 <a
-                  href="./images/Ravi_Mishra_Resume.pdf"
+                  href="./images/RaviMishra_Resume_.pdf"
                   class="button-flex"
                   id="resume-link-1"
                   target="_blank"
@@ -166,12 +166,7 @@
               </h1>
               <h3 class="home_subtitle"><span class="auto-type"></span></h3>
               <p class="home_description">
-                Welcome to the realm of possibilities! I'm a Full Stack Web
-                developer with strong skills in Backend technologies (Node.js
-                ,Express.js) & Frontend Tech (HTML , CSS , JavaScript, React.js)
-                fueled by curiosity and dedicated to crafting cutting-edge
-                solutions. Let's embark on a journey of innovation together,
-                shaping a dynamic digital landscape.
+                Welcome! I'm a Full Stack Developer with 12+ months of professional experience at Pathnovo Solutions and The Matrix Labs. I specialize in modern web technologies, crafting robust applications using Next.js, React.js, and TypeScript for frontend, while leveraging Node.js and Express.js for scalable backend solutions. Let's collaborate and turn your vision into reality!
               </p>
               <div class="btn_container">
                 <a href="#contact" class="button button-flex sec_button">
@@ -199,50 +194,35 @@
         <div class="about_container container grid">
           <div class="about_data">
             <p class="about_description" id="user-detail-intro">
-              Hi! My name is Ravi. I'm a MERN Stack Developer who graduated with
-              a Bachelor of Arts in 2022 and recently completed a 35-week Full
-              Stack Web Development course at Masai School. While I haven't had
-              formal work experience, I've gained valuable industry-level
-              knowledge during my time at Masai.
+              Hi! My name is Ravi. I'm a Full Stack Developer with professional experience in building scalable web applications. Currently working at Pathnovo Solutions as a Full Stack Developer, and previously contributed to innovative projects at The Matrix Labs. I graduated with a Bachelor of Arts in 2022 and enhanced my technical foundation through Masai School's intensive Full Stack Web Development program.
               <br />
               <br />
 
-              My journey into coding began as a curiosity, but quickly turned
-              into a full-blown pursuit as I discovered the power and potential
-              of Web Development. Backend technologies (Node.js, Express.js) &
-              Frontend Tech (HTML, CSS, JavaScript, React.js, TypeScript). Now,
-              I am honing my skills and building some great projects that
-              showcase my creativity, technical abilities, and problem-solving
-              mindset.
+              My journey in coding began as curiosity and evolved into a passionate career. I specialize in both Backend technologies (Node.js, Express.js) & Frontend Tech (Next.js, React.js, TypeScript). Through my professional experience, I've developed and deployed multiple production-level applications, working with cross-functional teams and delivering impactful solutions.
               <br />
 
-              These days, my main focus is on building interesting and creative
-              web designs. I enjoy coding things from scratch and bringing ideas
-              to life in the browser.
+              These days, my main focus is on building scalable web applications and exploring new technologies to create innovative solutions. I enjoy architecting robust systems and implementing clean, maintainable code that delivers exceptional user experiences.
               <br />
               <br />
-              I love immersing myself in different cultures, cuisines, and
-              landscapes, and using these experiences to inspire and inform my
-              work. Whether I'm hiking through the mountains or exploring a
-              bustling city, I always keep an open mind and a sense of wonder.
+              Beyond coding, I love immersing myself in different cultures, cuisines, and landscapes, using these experiences to inspire and inform my work. Whether I'm hiking through the mountains or exploring a bustling city, I always keep an open mind and a sense of wonder.
             </p>
             <div class="about_info">
               <div>
-                <span class="about_info-title">0</span>
-                <span class="about_info-name">+ Hours of Coding</span>
+                <span class="about_info-title">12</span>
+                <span class="about_info-name">+ Months of Experience</span>
               </div>
               <div class="about-info2">
-                <span class="about_info-title">0 </span>
-                <span class="about_info-name">+ Mini Assignments</span>
+                <span class="about_info-title">10</span>
+                <span class="about_info-name">+ Projects Completed</span>
               </div>
               <div>
-                <span class="about_info-title">3</span>
-                <span class="about_info-name"> + Completed Projects</span>
+                <span class="about_info-title">5</span>
+                <span class="about_info-name">+ Happy Clients</span>
               </div>
             </div>
             <div class="about_buttons">
               <a
-                href="./images/Ravi_Mishra_Resume.pdf"
+                href="./images/RaviMishra_Resume_.pdf"
                 class="button button-flex"
                 id="resume-button-2"
                 target="_blank"
@@ -384,6 +364,16 @@
                 <i class="uil uil-angle-down skills_arrow"></i>
               </div>
               <div class="skills_list grid">
+                
+                <div class="skills_data skills-card">
+                  <div class="skills_titles">
+                    <h3 class="skills_name skills-card-name">Next.js</h3>
+                    <span><i class="bx bxl-react skills-card-img"></i></span>
+                  </div>
+                  <div class="skills_bar">
+                    <span class="skills_percentage"></span>
+                  </div>
+                </div>
                 <div class="skills_data skills-card">
                   <div class="skills_titles">
                     <h3 class="skills_name skills-card-name">REACT</h3>
@@ -869,7 +859,7 @@
           </div>
           <div>
             <p class="footer_copy">
-              &#169; Ravi Mishra | All rights reserved | 2024
+              &#169; Ravi Mishra | All rights reserved | 2025
             </p>
           </div>
         </div>
@@ -895,56 +885,51 @@
     <!--  -->
 
     <script>
-      // set timer
-      const elemTitle = document.querySelector(".about_info-title");
-
-      const targetNumber = 1200;
-
-      const duration = 40000;
-
-      const increment = Math.ceil(targetNumber / (duration / 100));
-
+      // Counter for months of experience
+      const elemTitle = document.querySelector(".about_info div:first-child .about_info-title");
+      const targetNumber = 12; // 12 months of experience
+      const duration = 2000;
+      
       let currentNumber = 0;
-
       function updateNumber() {
-        elemTitle.textContent = currentNumber;
-        if (currentNumber < targetNumber) {
-          currentNumber += increment;
-          requestAnimationFrame(updateNumber);
+        if (currentNumber <= targetNumber) {
+          elemTitle.textContent = currentNumber;
+          currentNumber++;
+          setTimeout(updateNumber, duration / targetNumber);
         }
       }
 
+      // Counter for projects
+      const elemTitle2 = document.querySelector(".about-info2 .about_info-title");
+      const targetNumber2 = 10; // 10 projects
+      
+      let currentNumber2 = 0;
+      function updateNumber2() {
+        if (currentNumber2 <= targetNumber2) {
+          elemTitle2.textContent = currentNumber2;
+          currentNumber2++;
+          setTimeout(updateNumber2, duration / targetNumber2);
+        }
+      }
+
+      // Counter for clients
+      const elemTitle3 = document.querySelector(".about_info div:last-child .about_info-title");
+      const targetNumber3 = 5; // 5 clients
+      
+      let currentNumber3 = 0;
+      function updateNumber3() {
+        if (currentNumber3 <= targetNumber3) {
+          elemTitle3.textContent = currentNumber3;
+          currentNumber3++;
+          setTimeout(updateNumber3, duration / targetNumber3);
+        }
+      }
+
+      // Start all counters when page loads
       window.addEventListener("load", () => {
         updateNumber();
-      });
-
-      const elemTitle2 = document.querySelector(
-        ".about-info2 .about_info-title"
-      );
-
-      // Set the target number
-      const targetNumber2 = 50; // Replace with your desired number
-
-      // Set the duration of the animation in milliseconds
-      const duration2 = 100000; // Adjust as needed
-
-      // Calculate the increment value for each frame
-      const increment2 = Math.ceil(targetNumber2 / (duration2 / 100));
-
-      let currentNumber2 = 0;
-
-      // Function to update the displayed number and schedule the next update
-      function updateNumber2() {
-        elemTitle2.textContent = currentNumber2;
-        if (currentNumber2 < targetNumber2) {
-          currentNumber2 += increment2;
-          requestAnimationFrame(updateNumber2);
-        }
-      }
-
-      // Start the animation when the page is loaded
-      window.addEventListener("load", () => {
         updateNumber2();
+        updateNumber3();
       });
     </script>
     <!--  -->
